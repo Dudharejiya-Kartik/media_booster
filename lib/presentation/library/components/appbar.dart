@@ -4,7 +4,7 @@ AppBar app() {
   return AppBar(
     backgroundColor: Colors.black,
     leading: Image.asset(
-      'assets/img/logo.png',
+      'assets/img/logo.jpeg',
     ),
     title: const Text(
       'Search in Library',

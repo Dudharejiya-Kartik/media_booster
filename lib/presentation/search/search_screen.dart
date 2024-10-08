@@ -18,7 +18,7 @@ class SearchScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.black,
         leading: Image.asset(
-          'assets/img/logo.png',
+          'assets/img/logo.jpeg',
         ),
         title: const Text(
           'Search',

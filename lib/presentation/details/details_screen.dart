@@ -22,70 +22,72 @@ class DetailScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 28),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: Container(
-                height: 350,
-                width: 320,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image:
-                        AssetImage(musicList[audioProvider.songIndex]['image']),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                child: Container(
+                  height: 350,
+                  width: 320,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage(
+                          musicList[audioProvider.songIndex]['image']),
+                    ),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            Text(
-              musicList[audioProvider.songIndex]['title'],
-              style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
+              const SizedBox(
+                height: 30,
+              ),
+              Text(
+                musicList[audioProvider.songIndex]['title'],
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                    letterSpacing: 1,
+                    fontWeight: FontWeight.bold),
+              ),
+              // const SizedBox(
+              //   height: 5,
+              // ),
+              Text(
+                musicList[audioProvider.songIndex]['subtitle'],
+                style: const TextStyle(
+                  color: Colors.grey,
+                  fontSize: 18,
                   letterSpacing: 1,
-                  fontWeight: FontWeight.bold),
-            ),
-            // const SizedBox(
-            //   height: 5,
-            // ),
-            Text(
-              musicList[audioProvider.songIndex]['subtitle'],
-              style: const TextStyle(
-                color: Colors.grey,
-                fontSize: 18,
-                letterSpacing: 1,
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            const Text(
-              'View Lyrics >',
-              style: TextStyle(
-                color: Color(0xff00FFFF),
-                fontSize: 19,
-                letterSpacing: 1,
+              const SizedBox(
+                height: 10,
               ),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            showIcons(),
-            const SizedBox(
-              height: 30,
-            ),
-            slider(context, audioProvider),
-            sliderText(audioProvider),
-            const SizedBox(
-              height: 15,
-            ),
-            icons(audioProvider),
-          ],
+              const Text(
+                'View Lyrics >',
+                style: TextStyle(
+                  color: Color(0xff00FFFF),
+                  fontSize: 19,
+                  letterSpacing: 1,
+                ),
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              showIcons(),
+              const SizedBox(
+                height: 30,
+              ),
+              slider(context, audioProvider),
+              sliderText(audioProvider),
+              const SizedBox(
+                height: 15,
+              ),
+              icons(audioProvider),
+            ],
+          ),
         ),
       ),
     );
